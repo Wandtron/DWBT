@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="Layout.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row" id="topbar">
+
+        <div class="col-3 align-self-center " id="Namewebsite">e-Mensa</div>
+        <nav class="col-6 align-self-center justify-content-center" id="inhalt">
+            <ul class="nav justify-content-center" >
+                <li class="nav-item">
+                    <a class="nav-link" href="Start.html">Startseite </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Produkte.html">Mahlzeiten </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bestellungen </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.fh-aachen.de/studium/informatik-bsc/">FH-Aachen </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-3 align-self-center ">
+            <form action="http://www.google.de/search" class="input-group" method="GET" target="_blank">
+                <input name="as_sitesearch" type="hidden" value="www.fh-aachen.de" />
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-dark" id="button-addon1" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <input aria-label="Search" class="form-control border-dark"  name="q" placeholder="Suchen..." type="text">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="row" id="body1">
+        <div class="col-3 bottom-manual2">
+
+            <fieldset class="Login">
+                <legend> Login </legend>    <!--Überschrift der gesamten Box-->
+                <div class="col">
+                    <!--Klasse für Benutzer und Passworteingabe-->
+                    <input class="form-control" type="text" id="inputBenutzer" placeholder="Benutzer">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="****">
+                </div>
+
+                <button type="button" class="btn" style="margin-top:5px;">Anmelden </button>
+            </fieldset>
+
+
+        </div>
+        <div class="col-6">
+                <div class="row mt-1 mb-1">
+                    <div class="col ">
+                        <h2>Details für "Falafel"</h2>
+                    </div>
+                </div>
+                <div class="row mt-1 mb-1 ">
+                    <div class="col">
+                        <img alt="ein kleines X" class="img-fluid" src="pic/falafel2_breit.jpg"/>
+                    </div>
+                </div>
+
+            </div>
+        <div class="col-3">
+
+                <div class="row mt-4" id="preis">
+                <div class="col text-right">
+                    Gast-Preis
+                </div>
+            </div>
+                <div class="row" >
+                <div class="col text-right">
+                    <h2>5,95€</h2>
+                </div>
+            </div>
+                <div class="row align-items-end">
+                    <div class="col ">
+                    <button class="btn btn-outline-dark btn-block bottom-manual" type="button"><i class="fas fa-utensils"></i> Vorbestellen</button>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div class="row" id="body2">
+        <div class="col-3">
+            Melden Sie sich jetzt an, um die wirklich viel günstigeren Preise für Mitarbeiter oder Studenten zu sehen.
+        </div>
+        <div class="col-6">
+            <div class="row mt-1 mb-1">
+                <div class="col">
+                    <div class="container">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs " id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="beschreibung-tab" data-toggle="tab" href="#beschreibung" role="tab"  aria-selected="true">Beschreibung</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="zutaten-tab" data-toggle="tab" href="#zutaten" role="tab"  aria-selected="false">Zutaten</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Bewertungen-tab" data-toggle="tab" href="#Bewertungen" role="tab" aria-selected="false">Bewertungen</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content border border-top-0 ">
+                            <div class="tab-pane active" id="beschreibung" role="tabpanel" aria-labelledby="beschreibung-tab">
+                                Teigtasche mit Falafel aus Kichererbsen und Sesam, dazu passt hervorragend der <a href="#">Krautsatat</a>
+                            </div>
+                            <div class="tab-pane" id="zutaten" role="tabpanel" aria-labelledby="zutaten-tab">
+                                getrocknete Kichererbsen, Zwiebel, Knoblauch, Petersilie, Zitrone, Korianderpulver, Kreuzkümmel, Salz, Chilipulver, Backpulver, Mehl, Paniermehl und Olivenöl
+                            </div>
+                            <div class="tab-pane" id="Bewertungen" role="tabpanel" aria-labelledby="Bewertungen-tab">
+                                <form method="post" action="http://bc5.m2c-lab.fh-aachen.de/form.php" target="_blank">
+                                    <input type="hidden" name="matrikel" value="3137339">
+                                    <input type="hidden" name="kontrolle" value="fre">
+                                        <div class="row mx-2">
+                                            <div class="col-3 mt-2">Produkt: </div>
+                                            <div class="col mt-2">
+                                                <select name="mahlzeit" class="form-control">
+                                                    <option value="">Wähle Gericht</option>
+                                                    <option value="curry-Wok">Curry Wok</option>
+                                                    <option value="schnitzel">Schnitzel</option>
+                                                    <option value="bratrolle">Bratrolle</option>
+                                                    <option value="krautsalat">Krautsalat</option>
+                                                    <option selected value="falafel">Falafel</option>
+                                                    <option value="currywurst">Currywurst</option>
+                                                    <option value="kaesestulle">Käsestulle</option>
+                                                    <option value="spiegelei">Spiegelei</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    <div class="row mt-2 mx-2">
+                                        <div class="col-3">Benutzer: </div>
+                                        <div class="col"><input class="form-control rounded-0" name="benutzer" id="benutzer" placeholder="Benutzername"></div>
+                                    </div>
+
+                                    <div class="row mt-2 mx-2">
+                                        <div class="col-3">Bewertung: </div>
+                                        <div class="col">
+                                            <input type="number" name="bewertung" min="1" max="5" class="form-control rounded-0" value="5">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-2 mx-2">
+                                        <div class="col-3">Bemerkung: </div>
+                                        <div class="col"><textarea class="form-control rounded-0" name="bemerkung" rows="3" placeholder="Bitte Schreiben sie eine Bemerkung, damit wir uns verbessern können"></textarea></div>
+                                    </div>
+
+
+                                    <div class="row mt-2 mb-2 mx-2">
+                                        <div class="col-3"> </div>
+                                        <div class="col">
+                                            <button class="btn btn-outline-dark btn-block" type = "submit">Bewertung senden</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 ">
+        </div>
+    </div>
+
+    <div class="row mt-1 mb-1" id="bottombar">
+
+        <div class="col align-self-center"  id="Copyright">
+            <i class="far fa-copyright"></i> 2019 DBWT</div>
+
+        <nav class="col-auto align-self-center" id="inhalt2">
+            <ul class="nav" >
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrieren </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Zutatenliste </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Impressum.html">Impressum </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col"></div>
+    </div>
+</div>
+</body>
+</html>

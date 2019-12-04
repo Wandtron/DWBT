@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkte</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="Layout.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row" id="topbar">
+
+        <div class="col-3 align-self-center " id="Namewebsite">e-Mensa</div>
+        <nav class="col-6 align-self-center justify-content-center" id="inhalt">
+            <ul class="nav justify-content-center" >
+                <li class="nav-item">
+                    <a class="nav-link" href="Start.html">Startseite </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="Produkte.html">Mahlzeiten </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bestellungen </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://www.fh-aachen.de/studium/informatik-bsc/">FH-Aachen </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col-3 align-self-center ">
+            <form action="http://www.google.de/search" class="input-group" method="GET" target="_blank">
+                <input name="as_sitesearch" type="hidden" value="www.fh-aachen.de" />
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-dark" id="button-addon1" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <input aria-label="Search" class="form-control border-dark"  name="q" placeholder="Suchen..." type="text">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <h3>Verfügbare Speisen (Bestseller)</h3>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <fieldset>
+                <legend class="Überschrift"> Speisenliste filtern </legend>
+                <select id="Speise" class="form-control">
+                    <option selected value="">Kategorien</option>
+                    <option value="salate">Salate</option>
+                    <option value="hauptgerichte">Hauptgerichte</option>
+                    <option value="nachspeisen">Nachspeisen</option>
+                </select>
+                <form>
+                    <ul>
+                        <li>
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="verfügbar">nur verfügbar
+                            </label>
+                        </li>
+                        <li>
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="vegetarische">nur vegetarische
+                            </label>
+                        </li>
+                        <li>
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="vegane">nur vegane
+                            </label>
+                        </li>
+                    </ul>
+                </form>
+                <button class="btn btn-outline-dark btn-block" type="button">Speisen filtern</button>
+            </fieldset>
+        </div>
+        <div class="col-6">
+            <div class="row mt-1 mb-1">
+                <div class="col-3">
+
+                        <div>
+                    <img src="pic/wok_thai_curry_1.png" alt="Curry Wok" height="150" width="150" class="rounded img-fluid">
+                            <div class="text-center">
+                                Curry Wok <br>
+                            <a href="#">Details</a>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="col-3" >
+                    <div>
+                    <img src="pic/Wiener-Schnitzel_quadrat.jpg" alt="Schnitzel"  height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Schnitzel<br>
+                        <a href="#">Details</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-3 vergriffen">
+                    <div>
+                        <img src="pic/Bratrolle_quadrat.jpg" alt="Bratrolle" height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Bratrolle<br>vergrffen
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3" >
+                    <div>
+                    <img src="pic/krautsalat_quadrat.jpg" alt="Krautsalat" height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Krautsalat<br>
+                        <a href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1 mb-1">
+                <div class="col-3">
+                    <div>
+                        <img src="pic/falafel2_quadrat.jpg" alt="Falafel" height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Falafel<br>
+                            <a  href="Detail.html">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <img src="pic/Currywurst-mit-Sauce-selbstgemacht-nach-Bochumer-Originalrezept-.jpg" alt="Currywurst" height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Currywurst<br>
+                            <a href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <img src="pic/kc3a4sebrot.jpg" alt="Käsestulle" height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Käsestulle<br>
+                            <a href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <img src="pic/6263-spiegeleier-mit-speck.jpg" alt="Spiegelei" height="150" width="150" class="rounded img-fluid">
+                        <div class="text-center">
+                            Spiegelei<br>
+                            <a href="#">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="bottombar">
+
+        <div class="col align-self-center"  id="Copyright">
+            <i class="far fa-copyright"></i> 2019 DBWT</div>
+
+        <nav class="col-auto align-self-center" id="inhalt2">
+            <ul class="nav" >
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrieren </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Zutatenliste </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Impressum.html">Impressum </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="col"></div>
+    </div>
+</div>
+
+<!--
+    </form method=post>
+    <fieldset>
+        <legend>Persönliche Daten</legend>
+        <label for="user">Benutzername</label>
+        <input id="user" maxlength=49 name="pc_dbuser" required type="text"/>
+        <label for="mail">Ihre Mail</label>
+        <input id="mail" maxlength=49 name="pc_dbmail" required type="email"/>
+    </fieldset>
+    <fieldset>
+        <legend>Kategorie</legend>
+        <select name="kat" required size=4>
+            <option>DBWT</option>
+            <option>alles andere</option>
+            <option>alles andere</option>
+            <option>alles andere</option>
+            <option>alles andere</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <label><input name="freq" type="radio" value="Quartal"></label>
+    </fieldset>
+
+-->
+
+</body>
+</html>
