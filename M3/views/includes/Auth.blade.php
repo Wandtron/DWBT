@@ -1,0 +1,141 @@
+<?php
+Use eftec\bladeone\BladeOne;
+require __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::create(__DIR__,'/../LoginDatenbank.env');
+$dotenv->load();
+$dotenv->required(['DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASS','DB_PORT']);
+$remoteConnection = mysqli_connect(
+    getenv('DB_HOST'),
+    getenv('DB_USER'),
+    getenv('DB_PASS'),
+    getenv('DB_NAME'),
+    (int) getenv('DB_PORT')
+);
+//$_SESSION['visited']=1;
+
+$views = __DIR__ . '/../views';
+$cache = __DIR__ . '/../cache';
+// Prüfen ob daten übermittelt wurden
+
+$loggedIn = false;
+$error = false;
+$role = null;
+$name = null;
+$passwort = null;
+
+
+if (isset($_SESSION['user']) && isset($_SESSION['role'])) {
+    $name = $_SESSION['user'];
+    $role = $_SESSION['role'];
+    $loggedIn = true;
+}
+
+if (isset($_POST['logout']) && $_POST['logout'] == 1) {
+    $loggedIn = false;
+    session_destroy();
+    $delay = 0; // Where 0 is an example of a time delay. You can use 5 for 5 seconds, for example!
+    header("Refresh: $delay;");
+}
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $queryauth = "   SELECT  CONCAT(u.Vorname,' ', u.Nachname) AS Namevoll, u.LetzterLogin, u.Nutzername, u.Hash, u.Nummer AS ID, u.`E-Mail` AS `E-Mail`, IF(s.Student_ID IS NOT NULL, 'Student',
+                    IF(m.Mitarbeiter_ID IS NOT NULL, 'Mitarbeiter', 'Gast')) AS Rolle
+                    FROM `Benutzer` u
+						  LEFT JOIN `Studenten` s ON s.Student_ID = u.Nummer
+                    LEFT JOIN `Mitarbeiter` m on m.Mitarbeiter_ID = u.Nummer
+                    LEFT JOIN `Gäste` g ON g.Gäste_ID = u.Nummer WHERE u.Nutzername = '" . $_POST['username'] . "'";
+    if ($resultauth = mysqli_query($remoteConnection, $queryauth)) {
+        $row = mysqli_fetch_assoc($resultauth);
+        if (password_verify($_POST['password'], $row['Hash'])) {
+            $role = $row['Rolle'];
+            $name = $row['Namevoll'];
+            $_SESSION['user'] = $name;
+            $_SESSION['role'] = $role;
+            $error = false;
+            $loggedIn = true;
+            $_SESSION['loggedin'] = $loggedIn;
+            $_SESSION['nickname'] = $_POST['username'];
+            $_SESSION['id'] = $row['ID'];
+            $_SESSION['E-Mail'] = $row['E-Mail'];
+            $sql = 'UPDATE Benutzer SET LetzterLogin = CURRENT_TIMESTAMP() WHERE Nutzername="'.$_POST['username'].'";';
+            mysqli_query($remoteConnection, $sql);
+
+
+        }
+        else {
+            $error = true;
+        }
+
+    }
+    mysqli_free_result($resultauth);
+    mysqli_close($remoteConnection);
+}
+
+?>
+
+@if($loggedIn)
+    <div>
+        Hallo  {{$_SESSION['user']}}, Sie sind angemeldet als {{$_SESSION['role']}}
+        <form  action="" method="post">
+            <button  class=" btn-outline-dark btn btn-default" type="submit" name="logout" value="1" style="margin-top: 10px">Abmelden</button>
+            </fieldset>
+        </form>
+    </div>
+@else
+    @if($error == true)
+        <div class="login">
+            <form  method="post">
+                <fieldset>
+                    <legend>Login</legend>
+                    <div class="alert alert-danger" style="display:inline-block; background-color: #FA5858"
+                         role="alert">Das hat nicht geklappt! Bitte versuchen Sie es erneut.</div>
+                    <br>
+                    <label for="username">Nutzername</label>
+                    <input class="form-control is-invalid"  type="text" name="username"
+                           placeholder="Nutzername"
+                           id="username" required>
+                    <label for="password" style="margin-top: 5px">Passwort</label>
+                    <input class="form-control is-invalid"  type="password" name="password" placeholder="***" id="password" required>
+                    <input class=" btn-outline-dark btn btn-default" type="submit" value="Login" style="margin-top: 10px">
+                </fieldset>
+            </form>
+        </div>
+        @else
+        <div class="login">
+            <form  method="post">
+                <fieldset>
+                    <legend>Login</legend>
+                    <div class="alert" style="display:inline-block; background-color: cornflowerblue">
+                        Melden Sie sich an.
+                    </div>
+                    <br>
+                    <label for="username">
+                        Nutzername
+                    </label>
+                    <input class="form-control"  type="text" name="username"
+                           placeholder="Nutzersname"
+                           id="username" required>
+                    <label for="password" style="margin-top: 5px">
+                        Passwort
+                    </label>
+                    <input class="form-control" type="password" name="password" placeholder="***" id="password" required>
+                    <input class=" btn-outline-dark btn btn-default" type="submit" value="Login" style="margin-top: 10px">
+                </fieldset>
+            </form>
+        </div>
+        @endif
+    @endif
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<table class="table table-striped border border-dark">
+ <thead>
+ <tr>
+ <th scope="col">Zutat</th>
+ <th scope="col">Vegan?</th>
+ <th scope="col">Vegetarisch?</th>
+ <th scope="col">Glutenfrei?</th>
+ </tr>
+ </thead>
+ <tbody>
+ <?php $__currentLoopData = $zutatenarray; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <td id="id-<?php echo static::e($row['ID']); ?>">
+ <form action="http://www.google.de/search" method="GET" target="_blank" style="margin-bottom: 0px;">
+ <input class="btn btn-link" style="color:#00b5ad; margin: 0" data-toggle="tooltip" title="Suchen Sie nach <?php echo static::e($row['Name']); ?> im Web" type="submit" name="q" value="<?php echo static::e($row['Name']); ?>">
+ <?php if($row['Bio'] == 1): ?> <span> </span><img width="20" height="20" src="pic/bio-icon.svg" alt="Bio"><?php endif; ?>
+ </form>
+ </td>
+ <td>
+ <?php if($row['Vegan'] == 1): ?> <i class="far fa-check-circle"></i> <?php else: ?> <i class="far fa-circle"></i> <?php endif; ?>
+ </td>
+ <td>
+ <?php if($row['Vegetarisch'] == 1): ?> <i class="far fa-check-circle"></i> <?php else: ?> <i class="far fa-circle"></i> <?php endif; ?>
+ </td>
+ <td>
+ <?php if($row['Glutenfrei'] == 1): ?> <i class="far fa-check-circle"></i> <?php else: ?> <i class="far fa-circle"></i> <?php endif; ?>
+ </td>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </tbody>
+</table>

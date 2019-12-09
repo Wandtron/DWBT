@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b11bda73-63ad-450b-8632-9e10e3cb4e8b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="68c05f41-078b-4369-85cf-246c497484f6" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/eftec/bladeone" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1TcSgY5v3AD3rPalCdz0cppWutH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\M3" />
+      <recent name="C:\xampp\htdocs\M3\views\pages" />
+      <recent name="C:\xampp\htdocs\M3\views\includes" />
+      <recent name="C:\xampp\htdocs\M3\models" />
+      <recent name="C:\xampp\htdocs\M3\controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\M3\views\includes" />
+      <recent name="C:\xampp\htdocs\M3\RESTE" />
+      <recent name="C:\xampp\htdocs\M3\views\static\Subviews" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.M3">
+    <configuration name="M3" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" nameIsGenerated="true">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Built-in Web Server.Unnamed" />
+      <item itemvalue="PHP HTTP Request.Unnamed" />
+      <item itemvalue="PHPUnit.M3" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b11bda73-63ad-450b-8632-9e10e3cb4e8b" name="Default Changelist" comment="" />
+      <created>1573758001492</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573758001492</updated>
+      <workItem from="1573758003741" duration="382000" />
+      <workItem from="1573758387081" duration="13224000" />
+      <workItem from="1573808389833" duration="28168000" />
+      <workItem from="1573852515597" duration="3812000" />
+      <workItem from="1573904723585" duration="25826000" />
+      <workItem from="1573947001856" duration="920000" />
+      <workItem from="1574013132288" duration="1032000" />
+      <workItem from="1574102396369" duration="4730000" />
+      <workItem from="1574150221452" duration="275000" />
+      <workItem from="1574150858168" duration="1681000" />
+      <workItem from="1574154467526" duration="6667000" />
+      <workItem from="1574333202507" duration="4273000" />
+      <workItem from="1574413965851" duration="6341000" />
+      <workItem from="1574436761764" duration="3786000" />
+      <workItem from="1575491920993" duration="87000" />
+      <workItem from="1575492061383" duration="667000" />
+      <workItem from="1575591261091" duration="233000" />
+      <workItem from="1575591719863" duration="534000" />
+      <workItem from="1575627379125" duration="29933000" />
+      <workItem from="1575657663999" duration="35000" />
+      <workItem from="1575657700318" duration="29000" />
+      <workItem from="1575657736932" duration="18000" />
+      <workItem from="1575657762375" duration="11815000" />
+      <workItem from="1575670256970" duration="12742000" />
+      <workItem from="1575710309537" duration="40993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="252" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575670245964">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="252" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575670245964" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1575745754739">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575745754739" />
+    <state x="2660" y="279" key="FileChooserDialogImpl/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1575629069887" />
+    <state width="1877" height="174" key="GridCell.Tab.0.bottom" timestamp="1575657640789">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="174" key="GridCell.Tab.0.bottom/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575657640789" />
+    <state width="1877" height="174" key="GridCell.Tab.0.center" timestamp="1575657640789">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="174" key="GridCell.Tab.0.center/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575657640789" />
+    <state width="1877" height="174" key="GridCell.Tab.0.left" timestamp="1575657640789">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="174" key="GridCell.Tab.0.left/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575657640789" />
+    <state width="1877" height="174" key="GridCell.Tab.0.right" timestamp="1575657640789">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="174" key="GridCell.Tab.0.right/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575657640789" />
+    <state x="794" y="447" key="NewPhpFileDialog" timestamp="1575737137587">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="794" y="447" key="NewPhpFileDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575737137587" />
+    <state x="2714" y="447" key="NewPhpFileDialog/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1575629333610" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1575671063166">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575671063166" />
+    <state x="656" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1575710373807">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="347" key="com.intellij.ide.util.TipDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575710373807" />
+    <state x="140" y="-17" width="1636" height="1039" maximized="true" key="dock-window-1" timestamp="1575734763458">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="140" y="-17" width="1636" height="1039" maximized="true" key="dock-window-1/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575734763458" />
+    <state x="140" y="-17" width="1636" height="1039" key="dock-window-1/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1575730822816" />
+    <state x="2315" y="283" width="1636" height="1039" key="dock-window-2" timestamp="1575751209577">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2315" y="283" width="1636" height="1039" key="dock-window-2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575751209577" />
+    <state x="671" y="-19" width="1636" height="1039" maximized="true" key="dock-window-3" timestamp="1575752922646">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="671" y="-19" width="1636" height="1039" maximized="true" key="dock-window-3/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575752922646" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1575640016292">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575640016292" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1575642673885">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1575642673885" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../Steve/M3/model/Benutzer.php</url>
+          <line>119</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://D:/Eigene Dateien/Downloads/Benutzer (1).php</url>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

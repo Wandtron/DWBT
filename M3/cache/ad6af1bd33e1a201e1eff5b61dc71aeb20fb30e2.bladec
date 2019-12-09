@@ -1,0 +1,12 @@
+<!-- Stored in views/pages/zutaten.blade.php -->
+
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ Zutatenliste (<?php echo static::e(sizeof($myArr)); ?>)
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+<?php echo $this->runChild("includes.Zutatentabelle",array("zutatenarray" => $myArr)); ?>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('layouts.app'); } ?>

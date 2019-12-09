@@ -1,0 +1,118 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $__currentLoopData = $Arrinfo; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $rowinfo): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?><?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+<?php $this->startSection('title'); ?>
+ <?php if(sizeof($Arrinfo) != 0): ?>
+ Details für: "<?php echo static::e($rowinfo['Name']); ?>"
+ <?php else: ?>
+ Details
+ <?php endif; ?>
+<?php $this->stopSection(); ?>
+
+<?php if(sizeof($Arrinfo) == 0): ?>
+ <head> <meta http-equiv="refresh" content="3; URL=Produkte.php"> </head>
+<?php endif; ?>
+
+<?php $this->startSection('content'); ?>
+ <div class="row" id="body1">
+ <div class="col-3 bottom-manual2">
+ <?php echo $this->runChild("includes.Auth"); ?>
+ </div>
+ <div class="col-6">
+ <div class="row mt-1 mb-1">
+ <div class="col ">
+ <h2>Details für "<?php if(sizeof($Arrinfo) != 0): ?><?php echo static::e($rowinfo['Name']); ?><?php else: ?>???<?php endif; ?>"</h2>
+
+ </div>
+ </div>
+ <div class="row mt-1 mb-1 ">
+ <div class="col">
+ <?php if(sizeof($Arrinfo) == 0): ?> <img alt="Kein Bild gefunden" style="height: 250px;" class="rounded img-fluid w-100" src="pic/Artistic-4K-Wallpaper-3840x2160-banner.jpg"/>
+ <?php elseif($rowinfo['Alt-Text'] == ''): ?> <img alt="Kein Bild gefunden" style="height: 250px;" class="rounded img-fluid w-100" src="pic/Artistic-4K-Wallpaper-3840x2160-banner.jpg"/>
+ <?php else: ?>
+ <img class="rounded img-fluid w-100" style="height: 250px;"  alt="<?php echo static::e($rowinfo['Alt-Text']); ?>" src="data:image/gif;base64,<?php  echo  base64_encode($Arrinfo[0]['Binärdaten'])  ?>">
+ <?php endif; ?>
+
+ </div>
+ </div>
+
+ </div>
+ <div class="col-3">
+
+ <div class="row mt-4" id="preis">
+ <div class="col text-right">
+ <?php if(isset($_SESSION['role'])): ?> <?php echo static::e($_SESSION['role']); ?>-Preis
+ <?php else: ?> Gast-Preis
+ <?php endif; ?>
+ </div>
+ </div>
+ <div class="row" >
+ <div class="col text-right">
+ <?php if(sizeof($Arrinfo) == 0): ?>
+ <h2>Kein Gericht gefunden</h2>
+ <?php elseif($rowinfo['Jahr'] == ''): ?>
+ <h2>kein Preis vorhanden</h2>
+ <?php else: ?>
+ <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "Student"): ?>
+ <h2><?php echo static::e($rowinfo['Student-preis']); ?> </h2>
+ <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "Mitarbeiter"): ?>
+ <h2><?php echo static::e($rowinfo['MA-Preis']); ?></h2>
+ <?php else: ?>
+ <h2><?php echo static::e($rowinfo['Gastpreis']); ?></h2>
+ <?php endif; ?>
+ <?php endif; ?>
+ </div>
+ </div>
+ <div class="row align-items-end">
+ <div class="col ">
+ <button class="btn btn-outline-dark btn-block bottom-manual" type="button"><i class="fas fa-utensils"></i> Vorbestellen</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="row" id="body2">
+ <div class="col-3">
+ Melden Sie sich jetzt an, um die wirklich viel günstigeren Preise für Mitarbeiter oder Studenten zu sehen.
+ </div>
+ <div class="col-6">
+ <div class="row mt-1 mb-1">
+ <div class="col">
+ <div class="container">
+ <!-- Nav tabs -->
+ <ul class="nav nav-tabs " id="myTab" role="tablist">
+ <li class="nav-item">
+ <a class="nav-link active " id="beschreibung-tab" data-toggle="tab" href="#beschreibung" role="tab"  aria-selected="true">Beschreibung</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link " id="zutaten-tab" data-toggle="tab" href="#zutaten" role="tab"  aria-selected="false">Zutaten</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link " id="Bewertungen-tab" data-toggle="tab" href="#Bewertungen" role="tab" aria-selected="false">Bewertungen</a>
+ </li>
+ </ul>
+
+ <!-- Tab panes -->
+ <div class="tab-content border border-top-0 ">
+ <div class="tab-pane active" id="beschreibung" role="tabpanel" aria-labelledby="beschreibung-tab">
+ <?php if(sizeof($Arrinfo) != 0): ?>
+ <?php echo static::e($rowinfo['Beschreibung']); ?>
+
+ <?php endif; ?>
+ </div>
+ <div class="tab-pane " id="zutaten" role="tabpanel" aria-labelledby="zutaten-tab">
+ <?php echo $this->runChild("includes.Zutatentabelle", array("zutatenarray" => $Arrzutaten)); ?>
+
+ </div>
+ <div class="tab-pane" id="Bewertungen" role="tabpanel" aria-labelledby="Bewertungen-tab">
+ <?php echo $this->runChild("includes.Bewertung", array("Arrbewertung" => $Arrbewertung)); ?>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-3 ">
+ </div>
+ </div>
+
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('layouts.app'); } ?>

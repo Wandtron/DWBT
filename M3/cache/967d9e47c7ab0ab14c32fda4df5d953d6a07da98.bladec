@@ -1,0 +1,18 @@
+<!-- Stored in resources/views/child.blade.php -->
+<html lang="de">
+
+ <head>
+
+ <?php echo $this->runChild('includes.head'); ?>
+
+ <title><?php echo $this->yieldContent('title'); ?></title>
+
+ </head>
+ <body>
+ <div class="container">
+ <?php echo $this->runChild('includes.NavOben'); ?>
+ <?php echo $this->yieldContent('content'); ?>
+ <?php echo $this->runChild('includes.NavUnten'); ?>
+ </div>
+ </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DBWT View/.idea/DBWT View.iml" filepath="$PROJECT_DIR$/../DBWT View/.idea/DBWT View.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Steve/M3/.idea/M2.iml" filepath="$PROJECT_DIR$/../Steve/M3/.idea/M2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Marco/M3/.idea/M3.iml" filepath="$PROJECT_DIR$/../Marco/M3/.idea/M3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../swepl/.idea/swepl.iml" filepath="$PROJECT_DIR$/../swepl/.idea/swepl.iml" />
+    </modules>
+  </component>
+</project>

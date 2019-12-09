@@ -1,0 +1,49 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ Produkte
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+
+ <div class="row">
+ <div class="col text-center">
+ <h3>Verfügbare Speisen <?php if(sizeof($ArrThisKategory) != 0): ?> (<?php echo static::e($ArrThisKategory[0]['Bezeichnung']); ?>) <?php else: ?>(Bestseller) <?php endif; ?></h3>
+ </div>
+
+ </div>
+ <div class="row">
+ <div class="col-3">
+ <?php echo $this->runChild("includes.Produktefilter"); ?>
+ </div>
+ <div class="col-6">
+ <div class="row">
+ <?php if(sizeof($ArrMahleiten) == 0): ?>
+ <div class="col text-center"><h3>Keine Mahlzeiten gefunden :( </h3></div>
+ <?php endif; ?>
+ <?php $__currentLoopData = $ArrMahleiten; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $row): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <?php if($row['Vorrat'] <= 0): ?>
+ <div class="col-3">
+ <figure class="figure border my-1 rounded border-dark vergriffen">
+ <img width="100" class="rounded" height="100"  alt="<?php echo static::e($row['Alt-Text']); ?>" src="data:image/gif;base64,<?php  echo  base64_encode($row['Binärdaten'])  ?>">
+ <figcaption class="figure-caption text-center"><?php echo static::e($row['Name']); ?><br>vergriffen</figcaption>
+ </figure>
+ </div>
+ <?php else: ?>
+ <div class="col-3">
+ <figure class="figure border my-1 rounded border-dark ">
+ <img width="100" class="rounded" height="100"  alt="<?php echo static::e($row['Alt-Text']); ?>" src="data:image/gif;base64,<?php  echo  base64_encode($row['Binärdaten'])  ?>">
+ <figcaption class="figure-caption text-center"><form action="Detail.php" method="GET"><?php echo static::e($row['Name']); ?><br>
+ <input name="id" type="hidden" value="<?php echo static::e($row['ID']); ?>" />
+ <input class="btn btn-link btn-sm" style="color:#00b5ad;" data-toggle="tooltip" title="Mehr Details zu ' . $row['Name'] . ' herausfinden" type="submit" value="Details">
+ </form>
+ </figcaption>
+ </figure>
+ </div>
+ <?php endif; ?>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </div>
+ </div>
+ </div>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('layouts.app'); } ?>

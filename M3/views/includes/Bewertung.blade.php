@@ -1,0 +1,38 @@
+<form method="post" action="http://bc5.m2c-lab.fh-aachen.de/form.php" target="_blank">
+    <input type="hidden" name="matrikel" value="3137339">
+    <input type="hidden" name="kontrolle" value="fre">
+    <div class="row mx-2">
+        <div class="col-3 mt-2">Produkt: </div>
+        <div class="col mt-2">
+            <select name="mahlzeit" class="form-control border-dark">
+                @foreach($Arrbewertung as $row)
+                        <option value="{{$row}}">{{$row['Name']}}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+    <div class="row mt-2 mx-2">
+        <div class="col-3">Benutzer: </div>
+        <div class="col"><input class="form-control rounded-0 border-dark" name="benutzer" id="benutzer" placeholder="Benutzername"></div>
+    </div>
+
+    <div class="row mt-2 mx-2">
+        <div class="col-3">Bewertung: </div>
+        <div class="col">
+            <input type="number" name="bewertung" min="1" max="5" class="form-control rounded-0 border-dark" value="5">
+        </div>
+    </div>
+
+    <div class="row mt-2 mx-2">
+        <div class="col-3">Bemerkung: </div>
+        <div class="col"><textarea class="form-control rounded-0 border-dark" name="bemerkung" rows="3" placeholder="Bitte Schreiben sie eine Bemerkung, damit wir uns verbessern können"></textarea></div>
+    </div>
+
+
+    <div class="row mt-2 mb-2 mx-2">
+        <div class="col-3"> </div>
+        <div class="col">
+            <button class="btn btn-outline-dark btn-block" type = "submit">Bewertung senden</button>
+        </div>
+    </div>
+</form>
